@@ -7,11 +7,11 @@ import {Outlet} from 'react-router'
 function BasicLayout() {
   return (
     <Wrapper>
-      <Header />
+      {/* <Header /> */}
       <Section>
         <Outlet />
       </Section>
-      <Footer />
+      {/* <Footer /> */}
     </Wrapper>
   )
 }
