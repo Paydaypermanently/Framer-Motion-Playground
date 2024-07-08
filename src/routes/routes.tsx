@@ -6,6 +6,7 @@ import Login from "../pages/auth/login";
 import Index from "../pages/index";
 import Playground1 from "../pages/playground1";
 import Playground2 from "../pages/playground2";
+import Playground3 from "../pages/Playground3";
 
 export default createBrowserRouter([
   {
@@ -30,6 +31,18 @@ export default createBrowserRouter([
     path: "/playground2",
     element: <BasicLayout />,
     children: [{ index: true, element: <Playground2 /> }],
+    errorElement: <Error404 />,
+  },
+  {
+    path: "/playground3",
+    element: <BasicLayout />,
+    children: [{ index: true, element: <Playground3 /> }],
+    errorElement: <Error404 />,
+  },
+  {
+    path: "/playground4",
+    element: <BasicLayout />,
+    children: [{ index: true, element: <Playground4 /> }],
     errorElement: <Error404 />,
   },
 ]);

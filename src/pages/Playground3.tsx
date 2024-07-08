@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./playground2.module.scss";
+import styles from "./playground3.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
 const variants = {
@@ -7,7 +7,7 @@ const variants = {
   closed: { opacity: 1, x: "-100%" },
 };
 
-function Playground2() {
+function Playground3() {
   const [isOpen, setIsOpen] = useState(false);
 
   console.log(isOpen);
@@ -32,4 +32,4 @@ function Playground2() {
   );
 }
 
-export default Playground2;
+export default Playground3;
