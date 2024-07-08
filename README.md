@@ -1,1 +1,1 @@
-# MVVM Template (React-Query & Recoil) 
+Framer Motion Playground
