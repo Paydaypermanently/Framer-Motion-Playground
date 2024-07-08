@@ -1,0 +1,93 @@
+{
+  "name": "hobbyKorea",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "cp .env.dev .env && react-scripts start",
+    "build": "cp .env.dev .env && react-scripts build",
+    "build:production": "cp .env.prod .env && react-scripts build",
+    "deploy": "npm run build && bash scripts/deploy-dev.sh",
+    "deploy:production": "npm run build:production && bash scripts/deploy-prod.sh",
+    "lint": "eslint \\\"{src,apps,test}/**/*.ts\\\" --fix",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax less --fix",
+    "{src,test}/**/*.{js,jsx,tsx,ts,json}": [
+      "eslint --fix",
+      "prettier --write",
+      "npm run test",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^16.11.33",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
+    "antd": "^4.23.4",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.2",
+    "moment": "^2.29.4",
+    "query-string": "^7.1.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-query": "^3.39.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "recoil": "^0.7.6",
+    "styled-components": "^5.3.5",
+    "typescript": "^4.6.4",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/styled-components": "5.1.20",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-cypress": "2.12.1",
+    "eslint-plugin-prettier": "3.4.1",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-security": "1.5.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "6.12.0",
+    "http-proxy-middleware": "^2.0.6",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.7",
+    "prettier": "2.6.2",
+    "react-error-overlay": "6.0.9",
+    "stylelint": "14.7.1",
+    "stylelint-config-standard": "25.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-order": "5.0.0",
+    "stylelint-processor-styled-components": "1.10.0"
+  }
+}
