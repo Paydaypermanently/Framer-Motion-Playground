@@ -5,6 +5,7 @@ import Error404 from "../pages/errors/Error404";
 import Login from "../pages/auth/login";
 import Index from "../pages/index";
 import Playground1 from "../pages/playground1";
+import Playground2 from "../pages/playground2";
 
 export default createBrowserRouter([
   {
@@ -23,6 +24,12 @@ export default createBrowserRouter([
     path: "/playground1",
     element: <BasicLayout />,
     children: [{ index: true, element: <Playground1 /> }],
+    errorElement: <Error404 />,
+  },
+  {
+    path: "/playground2",
+    element: <BasicLayout />,
+    children: [{ index: true, element: <Playground2 /> }],
     errorElement: <Error404 />,
   },
 ]);
