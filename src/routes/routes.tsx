@@ -7,6 +7,7 @@ import Index from "../pages/index";
 import Playground1 from "../pages/playground1";
 import Playground2 from "../pages/playground2";
 import Playground3 from "../pages/Playground3";
+import Playground4 from "../pages/playground4";
 
 export default createBrowserRouter([
   {
