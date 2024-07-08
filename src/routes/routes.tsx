@@ -8,6 +8,7 @@ import Playground1 from "../pages/playground1";
 import Playground2 from "../pages/playground2";
 import Playground3 from "../pages/Playground3";
 import Playground4 from "../pages/playground4";
+import Playground5 from "../pages/playground5";
 
 export default createBrowserRouter([
   {
@@ -44,6 +45,12 @@ export default createBrowserRouter([
     path: "/playground4",
     element: <BasicLayout />,
     children: [{ index: true, element: <Playground4 /> }],
+    errorElement: <Error404 />,
+  },
+  {
+    path: "/playground5",
+    element: <BasicLayout />,
+    children: [{ index: true, element: <Playground5 /> }],
     errorElement: <Error404 />,
   },
 ]);

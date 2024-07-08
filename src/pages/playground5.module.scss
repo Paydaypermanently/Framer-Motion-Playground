@@ -1,0 +1,40 @@
+.wrapper {
+    background: yellow;
+    height: 100vh;
+    padding: 100px;
+    position: relative;
+    
+  
+    & > .object1 {
+      width: 240px;
+      height: 240px;
+      background: green;
+      position: absolute;
+      top:150px;
+    }
+  
+    & > .object2 {
+      width: 50px;
+      height: 50px;
+      background: red;
+    }
+  
+    & > .object3 {
+      margin-top: 20px;
+      width: 70px;
+      height: 70px;
+      background: blue;
+    }
+
+
+    & > .btn{
+        width: 100px;
+        height: 50px;
+        background: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  
